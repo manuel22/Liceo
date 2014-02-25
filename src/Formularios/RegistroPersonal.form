@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="0" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder thickness="2"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtcorreo" min="-2" pref="210" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cbotipocorreo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cbotipocorreo2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cbocodtmovil" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtnumtmovil" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cbocodtfijo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtnumtfijo" min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cbosexo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLayeredPane2" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clrfecha" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLayeredPane4" min="-2" pref="33" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtedad" min="-2" pref="28" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="icon7" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtnombres" min="-2" pref="195" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="cbocedula" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtcedula" min="-2" pref="107" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLayeredPane3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtapellidos" min="-2" pref="195" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="icon4" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLayeredPane5" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Component id="txtdireccion" min="-2" pref="394" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="icon8" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="txtcedula" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbocedula" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="2" attributes="0">
+                                  <Component id="jLabel3" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtnombres" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtapellidos" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="icon4" alignment="2" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLayeredPane5" min="-2" pref="26" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="jLayeredPane3" min="-2" pref="24" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="jLabel5" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbosexo" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="clrfecha" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtedad" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="icon7" alignment="2" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="jLayeredPane2" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="jLayeredPane4" alignment="2" min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="2" attributes="0">
+                              <Component id="txtdireccion" alignment="2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="icon8" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="jLabel9" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbocodtmovil" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtnumtmovil" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbocodtfijo" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtnumtfijo" alignment="2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="jLabel11" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtcorreo" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbotipocorreo" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbotipocorreo2" alignment="2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="96" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="btnguardar" min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnlimpiar" min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnbuscar" min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnactualizar" min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btneliminar" min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btncancelar" min="-2" pref="105" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnlimpiar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnbuscar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnactualizar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btneliminar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btncancelar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnguardar" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="btnguardar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/aceptar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Guardar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnguardarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnlimpiar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/limpiar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Limpiar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnlimpiarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnbuscar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/buscar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Buscar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbuscarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnactualizar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/actualizar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Actualizar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnactualizarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btneliminar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/borrar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Eliminar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btneliminarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btncancelar">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Trebuchet MS" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/botones/cancelar1.png"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Cancelar"/>
+                    <Property name="borderPainted" type="boolean" value="false"/>
+                    <Property name="contentAreaFilled" type="boolean" value="false"/>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncancelarActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cedula"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtcedula">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca la cedula del paciente. Ejemplo: 15958745"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtcedulaActionPerformed"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtcedulaFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtcedulaKeyTyped"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbocedula">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value="V-"/>
+                    <StringItem index="2" value="E-"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique el tipo de cedula. Ejemplo: V- o E-"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Nombres"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtnombres">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca el nombre del paciente: Ejemplo: Maria Elena"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnombresKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sexo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbosexo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value="M"/>
+                    <StringItem index="2" value="F"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique el sexo del paciente. Ejemplo: M, si es masculino"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
+              </Properties>
+            </Component>
+            <Component class="org.gui.JCalendarCombo" name="clrfecha">
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clrfechaMouseClicked"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clrfechaMousePressed"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="clrfechaFocusLost"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="clrfechaKeyPressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Edad"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtedad">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtedadMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtedadActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Direcci&#xf3;n "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtdireccion">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca la direcion del pacienteEjemplo: Calle: 14, # de casa o habitacion: 999, Sector: Las Rurales - Florecio Gimenez  "/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdireccionActionPerformed"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtdireccionKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Tel&#xe9;fono m&#xf3;vil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbocodtmovil">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="6">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value="0414"/>
+                    <StringItem index="2" value="0424"/>
+                    <StringItem index="3" value="0416"/>
+                    <StringItem index="4" value="0426"/>
+                    <StringItem index="5" value="0412"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique el codigo de perteneciente al telefono movil del paciente. Ejemplo: 0414"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbocodtmovilActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtnumtmovil">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca el numero de telefono movil. Ejemplo: 1234567"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnumtmovilActionPerformed"/>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtnumtmovilFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnumtmovilKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel10">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Tel&#xe9;fono fijo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbocodtfijo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value="0251"/>
+                    <StringItem index="2" value="0252"/>
+                    <StringItem index="3" value="0253"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique el codigo de area perteneciente al telefono fijo del paciente. Ejemplo: 0251"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbocodtfijoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel11">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Correo electr&#xf3;nico"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtcorreo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca el inicio del correo electonico del paciente. Ejemplo: juan_martinez95"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtcorreoFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtcorreoKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbotipocorreo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value="@hotmail"/>
+                    <StringItem index="2" value="@outlook"/>
+                    <StringItem index="3" value="@gmail"/>
+                    <StringItem index="4" value="@yahoo"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique tipo de correo. Ejemplo: @gmail"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbotipocorreoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbotipocorreo2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Seleccione"/>
+                    <StringItem index="1" value=".com"/>
+                    <StringItem index="2" value=".es"/>
+                  </StringArray>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Indique la extension del correo. Ejemplo: .com"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbotipocorreo2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="icon7">
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon7MouseEntered"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="icon8">
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon8MouseEntered"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel8">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Apellidos"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtapellidos">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca el apellido del paciente. Ejemplo: Rodrigez Peraza"/>
+              </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtapellidosKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtnumtfijo">
+              <Properties>
+                <Property name="toolTipText" type="java.lang.String" value="Introduzca el numero de telefono fijo. Ejemplo: 1234567"/>
+              </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtnumtfijoFocusLost"/>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnumtfijoKeyTyped"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JLayeredPane" name="jLayeredPane2">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="true"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="icon5">
+                  <Events>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon5MouseEntered"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="-1" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JLayeredPane" name="jLayeredPane3">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="true"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="icon3">
+                  <Events>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon3MouseEntered"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="-1" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JLayeredPane" name="jLayeredPane4">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="true"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="icon6">
+                  <Events>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon6MouseEntered"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="-1" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JLayeredPane" name="jLayeredPane5">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="true"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="icon1">
+                  <Events>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon1MouseEntered"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="-1" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JLabel" name="icon2">
+                  <Events>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon2MouseEntered"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="-1" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="icon4">
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="icon4MouseEntered"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel14">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Trebuchet MS" size="12" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Tipo"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
