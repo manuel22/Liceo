@@ -2,6 +2,10 @@
 
 package Formularios;
 import BaseDeDatos.ConexionMySQL;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import java.sql.*;
+import java.text.SimpleDateFormat;
 
 public class RegistroPersonal extends javax.swing.JFrame {
 
@@ -9,7 +13,70 @@ public class RegistroPersonal extends javax.swing.JFrame {
     public RegistroPersonal() {
         initComponents();
     }
+ void habilitarcedula() {
+        cbocedula.setEnabled(true);
+        txtcedula.setEnabled(true);
+    }
 
+    void inhabilitarcedula() {
+        cbocedula.setEnabled(false);
+        txtcedula.setEnabled(false);
+    }
+
+    void inhabilitariconos() {
+        icon1.setVisible(false);
+        icon2.setVisible(false);
+        icon3.setVisible(false);
+        icon4.setVisible(false);
+        icon5.setVisible(false);
+        icon6.setVisible(false);
+        icon7.setVisible(false);
+        icon8.setVisible(false);
+    }
+
+    private void Habilitar() {
+
+        if (nivelU == 0) {
+            btneliminar.setEnabled(true);
+            //mnuMantenimiento.setEnabled(true);
+        }
+    }
+
+    private void Deshabilitar() {
+
+        if (nivelU == 1) {
+            btneliminar.setEnabled(false);
+            //mnuMantenimiento.setEnabled(false);
+        }
+    }
+
+    void limpiar() { //Declaracion del metodo que permite limpiar los campos
+        String dia = "", mes = "", ano = "";
+
+        habilitarcedula();
+        inhabilitariconos();
+        cbocedula.setSelectedItem("Seleccione");
+        txtcedula.setText("");
+        txtnombres.setText("");
+        txtapellidos.setText("");
+        cbosexo.setSelectedItem("Seleccione");
+        SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+        java.util.Date fechaDate = new java.util.Date();
+        String fecha = formateador.format(fechaDate);
+        dia = fecha.substring(0, 2);
+        mes = fecha.substring(3, 5);
+        ano = fecha.substring(6, 10);
+        clrfecha.setSelectedDate(Integer.parseInt(ano), Integer.parseInt(mes), Integer.parseInt(dia));
+        txtedad.setText("");
+        txtdireccion.setText("");
+        cbocodtmovil.setSelectedItem("Seleccione");
+        txtnumtmovil.setText("");
+        cbocodtfijo.setSelectedItem("Seleccione");
+        txtnumtfijo.setText("");
+        txtcorreo.setText("");
+        cbotipocorreo.setSelectedItem("Seleccione");
+        cbotipocorreo2.setSelectedItem("Seleccione");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,6 +134,9 @@ public class RegistroPersonal extends javax.swing.JFrame {
         icon2 = new javax.swing.JLabel();
         icon4 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -351,12 +421,14 @@ public class RegistroPersonal extends javax.swing.JFrame {
             }
         });
 
+        icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon7MouseEntered(evt);
             }
         });
 
+        icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon8MouseEntered(evt);
@@ -386,45 +458,50 @@ public class RegistroPersonal extends javax.swing.JFrame {
             }
         });
 
+        icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon5MouseEntered(evt);
             }
         });
         jLayeredPane2.add(icon5);
-        icon5.setBounds(0, 0, 0, 30);
+        icon5.setBounds(0, 0, 30, 30);
 
+        icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon3MouseEntered(evt);
             }
         });
         jLayeredPane3.add(icon3);
-        icon3.setBounds(0, 0, 0, 20);
+        icon3.setBounds(0, 0, 30, 20);
 
+        icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon6MouseEntered(evt);
             }
         });
         jLayeredPane4.add(icon6);
-        icon6.setBounds(0, 0, 0, 30);
+        icon6.setBounds(0, 0, 30, 30);
 
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon1MouseEntered(evt);
             }
         });
         jLayeredPane5.add(icon1);
-        icon1.setBounds(0, 0, 0, 20);
+        icon1.setBounds(0, 0, 30, 20);
 
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 icon2MouseEntered(evt);
             }
         });
         jLayeredPane5.add(icon2);
-        icon2.setBounds(0, 0, 0, 20);
+        icon2.setBounds(0, 0, 23, 20);
 
         icon4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -433,7 +510,18 @@ public class RegistroPersonal extends javax.swing.JFrame {
         });
 
         jLabel14.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jLabel14.setText("Tipo");
+        jLabel14.setText("Tipo:");
+
+        jRadioButton1.setText("Administrativo");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jRadioButton2.setText("Docente");
+
+        jRadioButton3.setText("Mantenimiento");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -445,7 +533,14 @@ public class RegistroPersonal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jRadioButton3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -569,7 +664,11 @@ public class RegistroPersonal extends javax.swing.JFrame {
                     .addComponent(cbotipocorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbotipocorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel14)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton3))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
 
@@ -620,15 +719,6 @@ public class RegistroPersonal extends javax.swing.JFrame {
         ano = clrfecha.getSelectedYear();
         fecha = ano + "-" + mes + "-" + dia;
         edad = txtedad.getText();
-        nombrespm = txtnombrespm.getText();
-        apellidospm = txtapellidos.getText();
-        if ((!nombrespm.equals("")) && (!apellidospm.equals(""))) {
-            nombrespm = txtnombrespm.getText();
-            apellidospm = txtapellidos.getText();
-        } else {
-            nombrespm = "";
-            apellidospm = "";
-        }
         movilcod = cbocodtmovil.getSelectedItem().toString();
         movilnum = txtnumtmovil.getText();
         if ((movilcod.equals("Seleccione")) && (movilnum.equals(""))) {
@@ -839,15 +929,6 @@ public class RegistroPersonal extends javax.swing.JFrame {
         ano = clrfecha.getSelectedYear();
         fecha = ano + "/" + mes + "/" + dia;
         edad = txtedad.getText();
-        nombrespm = txtnombrespm.getText();
-        apellidospm = txtapellidos.getText();
-        if ((!nombrespm.equals("")) && (!apellidospm.equals(""))) {
-            nombrespm = txtnombrespm.getText();
-            apellidospm = txtapellidos.getText();
-        } else {
-            nombrespm = "";
-            apellidospm = "";
-        }
         codtmovil = cbocodtmovil.getSelectedItem().toString();
         numtmovil = txtnumtmovil.getText();
         if ((codtmovil.equals("Seleccione")) && (numtmovil.equals(""))) {
@@ -1000,27 +1081,12 @@ public class RegistroPersonal extends javax.swing.JFrame {
                     int edadreal = 0;
                     edadreal = edad - 1;
                     txtedad.setText(Integer.toString(edadreal));
-                    if (edadreal < 9) {
-                        txtnombrespm.setEnabled(true);
-                        txtapellidospm.setEnabled(true);
-                    }
-                } else {
-                    txtedad.setText(Integer.toString(edad));
-                    if (edad < 9) {
-                        txtnombrespm.setEnabled(true);
-                        txtapellidospm.setEnabled(true);
-                    }
-                }
-            } else {
-                txtedad.setText(Integer.toString(edad));
-                if (edad < 9) {
-                    txtnombrespm.setEnabled(true);
-                    txtapellidospm.setEnabled(true);
-                }
-            }
+                    
         } else {
             JOptionPane.showMessageDialog(null, "La fecha introducida no es valida");
         }
+            }
+        }  
     }//GEN-LAST:event_txtedadMouseClicked
 
     private void txtedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtedadActionPerformed
@@ -1152,6 +1218,10 @@ public class RegistroPersonal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_icon4MouseEntered
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1228,6 +1298,9 @@ public class RegistroPersonal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTextField txtapellidos;
     public static javax.swing.JTextField txtcedula;
     private javax.swing.JTextField txtcorreo;
