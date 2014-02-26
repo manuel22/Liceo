@@ -6,17 +6,37 @@
 
 package Formularios;
 
+import java.awt.HeadlessException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+
 /**
  *
  * @author manuelalejandro
  */
 public class Maestro extends javax.swing.JFrame {
 
+
+   
     /**
      * Creates new form Maestro
      */
     public Maestro() {
         initComponents();
+        Reloj hilo=new Reloj(hora2);
+        hilo.start();
+        hora();
+    }
+     public void hora(){
+        Calendar Cal = new GregorianCalendar();
+// Calendar Cal= new Calendar.getInstance();
+        String fec= Cal.get(Cal.DATE)+"/"+(Cal.get(Cal.MONTH)+1)+
+        "/"+Cal.get(Cal.YEAR);
+        hora1.setText(fec);
     }
 
     /**
@@ -28,6 +48,11 @@ public class Maestro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jLabel6 = new javax.swing.JLabel();
+        hora1 = new javax.swing.JLabel();
+        hora2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuregistroyconsulta = new javax.swing.JMenu();
         menupaciente = new javax.swing.JMenuItem();
@@ -50,6 +75,18 @@ public class Maestro extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel6.setText("Fecha");
+
+        hora1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        hora1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        hora2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        hora2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("Hora");
 
         menuregistroyconsulta.setText("Registro y Consulta");
         menuregistroyconsulta.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
@@ -163,6 +200,7 @@ public class Maestro extends javax.swing.JFrame {
         jMenu7.setText("Ayuda");
         jMenu7.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
 
+        jMenuItem5.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         jMenuItem5.setText("Manual de usuario");
         jMenu7.add(jMenuItem5);
 
@@ -197,11 +235,27 @@ public class Maestro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(hora1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hora2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(243, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(hora2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(hora1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addContainerGap())
         );
 
         pack();
@@ -306,6 +360,10 @@ public class Maestro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel hora1;
+    private javax.swing.JLabel hora2;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu7;
@@ -318,6 +376,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JMenuItem menufacturacion;
     private javax.swing.JMenuItem menupaciente;
     private javax.swing.JMenu menuregistroyconsulta;

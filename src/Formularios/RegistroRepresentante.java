@@ -1,24 +1,34 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 package Formularios;
 import BaseDeDatos.ConexionMySQL;
 import java.awt.event.KeyEvent;
-import javax.swing.JOptionPane;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author manuelalejandro
+ */
+public class RegistroRepresentante extends javax.swing.JFrame {
 
-public class RegistroPersonal extends javax.swing.JFrame {
-NiveldeAcceso entrada = new NiveldeAcceso();
-    public int nivelU = Acceso.getNivelU();
-   
-    public RegistroPersonal() {
+    /**
+     * Creates new form RegistroRepresentante
+     */
+    public RegistroRepresentante() {
         initComponents();
         inhabilitariconos();
-        Deshabilitar();
-        Habilitar();
     }
- void habilitarcedula() {
+     void habilitarcedula() {
         cbocedula.setEnabled(true);
         txtcedula.setEnabled(true);
     }
@@ -27,8 +37,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         cbocedula.setEnabled(false);
         txtcedula.setEnabled(false);
     }
-
-    void inhabilitariconos() {
+void inhabilitariconos() {
         icon1.setVisible(false);
         icon2.setVisible(false);
         icon3.setVisible(false);
@@ -38,24 +47,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         icon7.setVisible(false);
         icon8.setVisible(false);
     }
-
-    private void Habilitar() {
-
-        if (nivelU == 0) {
-            btneliminar.setEnabled(true);
-            //mnuMantenimiento.setEnabled(true);
-        }
-    }
-
-    private void Deshabilitar() {
-
-        if (nivelU == 1) {
-            btneliminar.setEnabled(false);
-            //mnuMantenimiento.setEnabled(false);
-        }
-    }
-
-    void limpiar() { //Declaracion del metodo que permite limpiar los campos
+ void limpiar() { //Declaracion del metodo que permite limpiar los campos
         String dia = "", mes = "", ano = "";
 
         habilitarcedula();
@@ -91,7 +83,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -138,10 +129,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         icon1 = new javax.swing.JLabel();
         icon2 = new javax.swing.JLabel();
         icon4 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,11 +141,13 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnguardar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/aceptar1.png"))); // NOI18N
+        btnguardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/aceptar2.png"))); // NOI18N
         btnguardar.setToolTipText("Guardar");
         btnguardar.setBorderPainted(false);
         btnguardar.setContentAreaFilled(false);
         btnguardar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnguardar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/aceptar3.png"))); // NOI18N
+        btnguardar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/aceptar1.png"))); // NOI18N
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnguardarActionPerformed(evt);
@@ -166,10 +155,12 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         });
 
         btnlimpiar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btnlimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/limpiar1.png"))); // NOI18N
+        btnlimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/actualizar2.png"))); // NOI18N
         btnlimpiar.setToolTipText("Limpiar");
         btnlimpiar.setBorderPainted(false);
         btnlimpiar.setContentAreaFilled(false);
+        btnlimpiar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/actualizar3.png"))); // NOI18N
+        btnlimpiar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/actualizar1.png"))); // NOI18N
         btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnlimpiarActionPerformed(evt);
@@ -177,11 +168,13 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         });
 
         btnbuscar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/buscar1.png"))); // NOI18N
+        btnbuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/buscar2.png"))); // NOI18N
         btnbuscar.setToolTipText("Buscar");
         btnbuscar.setBorderPainted(false);
         btnbuscar.setContentAreaFilled(false);
         btnbuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnbuscar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/buscar3.png"))); // NOI18N
+        btnbuscar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/buscar1.png"))); // NOI18N
         btnbuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbuscarActionPerformed(evt);
@@ -189,11 +182,13 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         });
 
         btnactualizar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/actualizar1.png"))); // NOI18N
+        btnactualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/limpiar2.png"))); // NOI18N
         btnactualizar.setToolTipText("Actualizar");
         btnactualizar.setBorderPainted(false);
         btnactualizar.setContentAreaFilled(false);
         btnactualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnactualizar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/limpiar3.png"))); // NOI18N
+        btnactualizar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/limpiar1.png"))); // NOI18N
         btnactualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnactualizarActionPerformed(evt);
@@ -201,11 +196,13 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         });
 
         btneliminar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/borrar1.png"))); // NOI18N
+        btneliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/borrar2.png"))); // NOI18N
         btneliminar.setToolTipText("Eliminar");
         btneliminar.setBorderPainted(false);
         btneliminar.setContentAreaFilled(false);
         btneliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btneliminar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/borrar3.png"))); // NOI18N
+        btneliminar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/borrar1.png"))); // NOI18N
         btneliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btneliminarActionPerformed(evt);
@@ -213,11 +210,13 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         });
 
         btncancelar.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        btncancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/cancelar1.png"))); // NOI18N
+        btncancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/cancelar2.png"))); // NOI18N
         btncancelar.setToolTipText("Cancelar");
         btncancelar.setBorderPainted(false);
         btncancelar.setContentAreaFilled(false);
         btncancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btncancelar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/cancelar3.png"))); // NOI18N
+        btncancelar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/cancelar1.png"))); // NOI18N
         btncancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncancelarActionPerformed(evt);
@@ -470,7 +469,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             }
         });
         jLayeredPane2.add(icon5);
-        icon5.setBounds(0, 0, 30, 30);
+        icon5.setBounds(0, 0, 23, 30);
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -479,7 +478,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             }
         });
         jLayeredPane3.add(icon3);
-        icon3.setBounds(0, 0, 30, 20);
+        icon3.setBounds(0, 0, 23, 20);
 
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -497,7 +496,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             }
         });
         jLayeredPane5.add(icon1);
-        icon1.setBounds(0, 0, 30, 20);
+        icon1.setBounds(0, 0, 23, 20);
 
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -506,7 +505,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             }
         });
         jLayeredPane5.add(icon2);
-        icon2.setBounds(0, 0, 23, 20);
+        icon2.setBounds(-23, 0, 23, 21);
 
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/botones/triangulo.png"))); // NOI18N
         icon4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -515,20 +514,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
-        jLabel14.setText("Tipo:");
-
-        jRadioButton1.setText("Administrativo");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton2.setText("Docente");
-
-        jRadioButton3.setText("Mantenimiento");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -536,17 +521,9 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton3))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -568,24 +545,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtnumtfijo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbosexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(clrfecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(icon7))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
@@ -606,14 +565,34 @@ NiveldeAcceso entrada = new NiveldeAcceso();
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtapellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(icon4))
+                                .addComponent(icon4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(1, 1, 1)
-                        .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(1, 1, 1)
+                                .addComponent(txtdireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(icon8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbosexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(clrfecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtedad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(icon8)))
+                        .addComponent(icon7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -669,13 +648,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
                     .addComponent(txtcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbotipocorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbotipocorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -685,7 +658,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -712,7 +685,7 @@ NiveldeAcceso entrada = new NiveldeAcceso();
     private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
         String ced1 = "", ced2 = "", nombres = "", apellidos = "", sexo = "", direccion = "", dia = "", mes = "", ano = "", fecha = "", edad = "", nombrespm = "", apellidospm = "", movilcod = "", movilnum = "", fijocod = "", fijonum = "", correo1 = "", correo2 = "", correo3 = "", sSQL = "", status = "A", sSQL2 = "", cedula = "", status2 = "", datos = "", sSQL3 = "";
 
-       /* inhabilitariconos();*/
+        inhabilitariconos();
         ced1 = cbocedula.getSelectedItem().toString();
         ced2 = txtcedula.getText();
         cedula = ced1 + ced2;
@@ -725,6 +698,15 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         ano = clrfecha.getSelectedYear();
         fecha = ano + "-" + mes + "-" + dia;
         edad = txtedad.getText();
+        
+        apellidospm = txtapellidos.getText();
+        if ((!nombrespm.equals("")) && (!apellidospm.equals(""))) {
+            
+            apellidospm = txtapellidos.getText();
+        } else {
+            nombrespm = "";
+            apellidospm = "";
+        }
         movilcod = cbocodtmovil.getSelectedItem().toString();
         movilnum = txtnumtmovil.getText();
         if ((movilcod.equals("Seleccione")) && (movilnum.equals(""))) {
@@ -935,6 +917,15 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         ano = clrfecha.getSelectedYear();
         fecha = ano + "/" + mes + "/" + dia;
         edad = txtedad.getText();
+        
+        apellidospm = txtapellidos.getText();
+        if ((!nombrespm.equals("")) && (!apellidospm.equals(""))) {
+            
+            apellidospm = txtapellidos.getText();
+        } else {
+            nombrespm = "";
+            apellidospm = "";
+        }
         codtmovil = cbocodtmovil.getSelectedItem().toString();
         numtmovil = txtnumtmovil.getText();
         if ((codtmovil.equals("Seleccione")) && (numtmovil.equals(""))) {
@@ -1081,25 +1072,25 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         anoactu = Integer.parseInt(fecha.substring(6, 10));
         edad = anoactu - ano;
 
-         if (edad >= 0) {
+        if (edad >= 0) {
             if (mesactu <= mes) {
                 if (diaactu < dia) {
                     int edadreal = 0;
                     edadreal = edad - 1;
                     txtedad.setText(Integer.toString(edadreal));
                     if (edadreal < 10) {
-                        JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito como estudiante de bachillerato");
+                        JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito");
                     }
                 } else {
                     txtedad.setText(Integer.toString(edad));
                     if (edad < 10) {
-                       JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito como estudiante de bachillerato");
+                       JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito");
                     }
                 }
             } else {
                 txtedad.setText(Integer.toString(edad));
                 if (edad < 10) {
-                   JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito como estudiante de bachillerato");
+                   JOptionPane.showMessageDialog(null, "Su edad no es suficiente para ser inscrito");
                 }
             }
         } else {
@@ -1236,10 +1227,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
         // TODO add your handling code here:
     }//GEN-LAST:event_icon4MouseEntered
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1257,20 +1244,20 @@ NiveldeAcceso entrada = new NiveldeAcceso();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroRepresentante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroRepresentante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroRepresentante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroPersonal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroRepresentante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistroPersonal().setVisible(true);
+                new RegistroRepresentante().setVisible(true);
             }
         });
     }
@@ -1282,7 +1269,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
     private javax.swing.JButton btneliminar;
     private javax.swing.JButton btnguardar;
     private javax.swing.JButton btnlimpiar;
-    private javax.swing.ButtonGroup buttonGroup1;
     public static javax.swing.JComboBox cbocedula;
     private javax.swing.JComboBox cbocodtfijo;
     private javax.swing.JComboBox cbocodtmovil;
@@ -1300,7 +1286,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
     private javax.swing.JLabel icon8;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1316,9 +1301,6 @@ NiveldeAcceso entrada = new NiveldeAcceso();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JTextField txtapellidos;
     public static javax.swing.JTextField txtcedula;
     private javax.swing.JTextField txtcorreo;
